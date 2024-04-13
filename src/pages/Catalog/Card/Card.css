@@ -1,0 +1,173 @@
+.catalog_item {
+    flex: 0 1 20%;
+    padding: 12px;
+    border: 1px solid #e4e4e4;
+    border-radius: 6px;
+    gap: 10px;
+}
+.catalog_name {
+    font-weight: 600;
+    margin-bottom: 1em;
+
+}
+.catalog_price {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 1em;
+
+}
+.catalog_button {
+    text-align: center;
+    padding: 5px 24px;
+    color: yellowgreen;
+    background-color: white;
+    border: 1px solid yellowgreen;
+
+    border-radius: 6px;
+}
+.catalog_button.btn-fill {
+    background-color: yellowgreen;
+    color: white;
+}
+.card {
+	margin: auto;
+	position: relative;
+	width: 300px;
+	height: 400px;
+	overflow: hidden;
+	cursor: pointer;
+	transition: 0.3s linear;
+    display: flex;
+    flex-direction: column;
+
+}
+.card img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: 0.7s;
+}
+.card-overlay {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 18%;
+	display: flex;
+	color: #fff;
+	transition: 0.3s;
+	background: rgba(55, 55, 55, 0.7);
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+.card:hover .card-overlay {
+	top: 83%;
+}
+.card-overlay h3 {
+    font-weight: 500;
+	font-size: 18px;
+	margin-bottom: 10px;
+
+
+}
+.sizes {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 7px;
+}
+
+.size {
+	font-size: 14px;
+	margin-bottom: 10px;
+	text-decoration: none;
+	color: #fff;
+    padding: 5px 5px;
+	transition: .4s ease-in-out;
+
+}
+.size:hover {
+    background-color:#fff;
+    color: #000000;
+}
+.elem_title, .elem_price {
+    font-size: 18px;
+    margin-top: 15px;
+}
+.elem_price {
+    font-weight: 600;
+}
+.heart_icon {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    transition: .2s linear;
+}
+
+.heart_icon:hover > path {
+    stroke: rgb(197, 51, 51);
+    transition: .2s linear;
+
+}
+
+.cart_button {
+    margin-top: 20px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.4s linear;
+    
+}
+.cart_button:hover {
+    color:#ffffff;
+    background: #383838;
+    transition: 0.4s linear;
+
+}
+.cart_button:focus {
+    color:#ffffff;
+    background: #383838;
+    transition: 0.4s linear;
+
+}
+.elem_latest {
+
+    color: rgb(0, 49, 83);
+    background-color: #fff;
+    padding: 3px 8px 2px;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    text-transform: uppercase;
+
+}
+.elem_sale_price {
+
+    font-size: 20px;
+}
+.sale_font {
+    color: #a1a1a1;
+    font-size: 20px;
+}
+.sale_price {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+.elem_sale {
+    color: rgb(240, 204, 246);
+    background-color: #fff;
+    padding: 3px 8px 2px;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    text-transform: uppercase;
+}
