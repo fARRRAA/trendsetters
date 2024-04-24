@@ -55,11 +55,11 @@ export function Catalog(){
         </div>
         <div className="pagesAndMore">
                     <div className="pages">
-                         <button onClick={()=>{setCurrentPaginPage(0);setNextPaginPage(12);}} className="page">1</button>
-                        <button onClick={()=>{setCurrentPaginPage(12);setNextPaginPage(24);}} className="page">2</button>
-                        <button onClick={()=>{setCurrentPaginPage(24);setNextPaginPage(36);}} className="page">3</button>
-                        <button onClick={()=>{setCurrentPaginPage(0);setNextPaginPage(12);}} className="page">4</button>
-                        <button onClick={()=>{setCurrentPaginPage(12);setNextPaginPage(24);}} className="page">5</button>
+                         <button onClick={()=>{setCurrentPaginPage(0);setNextPaginPage(itemsCount);}} className="page">1</button>
+                        <button onClick={()=>{setCurrentPaginPage(12);setNextPaginPage(itemsCount*2);}} className="page">2</button>
+                        <button onClick={()=>{setCurrentPaginPage(24);setNextPaginPage(itemsCount*3);}} className="page">3</button>
+                        <button onClick={()=>{setCurrentPaginPage(0);setNextPaginPage(itemsCount);}} className="page">4</button>
+                        <button onClick={()=>{setCurrentPaginPage(12);setNextPaginPage(itemsCount*2);}} className="page">5</button>
                         {/* <button onClick={} className="page">3</button>
                         <button onClick={} className="page">4</button>
                         <button onClick={} className="page">5</button>  */}
