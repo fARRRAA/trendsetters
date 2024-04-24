@@ -4,6 +4,10 @@ import {Card} from './Card/Card.jsx'
 import { store } from "../../data/store";
 export function Catalog(){
     const[columns,SetColumns] = useState(4);
+    const [currentPaginPage,setCurrentPaginPage]= useState(0);
+    const [nextPaginPage,setNextPaginPage]= useState(12);
+    const itemsCount=12;
+    let newStore = store.slice(currentPaginPage,nextPaginPage);
     // const cardElements = store.map(item=><Card title={item.title} price={item.price}/>);
     return (
     <>
@@ -45,17 +49,20 @@ export function Catalog(){
         <div className={columns == 3? 'catalog_wrapper col-3': 'catalog_wrapper'}>
             {
                 // cardElements
-                store.map((element) => <Card id= {element.id} title={element.title} price={element.price} img={element.img}/>)
+                newStore.map((element) => <Card id= {element.id} title={element.title} price={element.price} img={element.img}/>)
             }
 
         </div>
         <div className="pagesAndMore">
                     <div className="pages">
-                        <a href="#" className="page">1</a>
-                        <a href="#" className="page">2</a>
-                        <a href="#" className="page">3</a>
-                        <a href="#" className="page">4</a>
-                        <a href="#" className="page">5</a>
+                         <button onClick={()=>{setCurrentPaginPage(0);setNextPaginPage(12);}} className="page">1</button>
+                        <button onClick={()=>{setCurrentPaginPage(12);setNextPaginPage(24);}} className="page">2</button>
+                        <button onClick={()=>{setCurrentPaginPage(24);setNextPaginPage(36);}} className="page">3</button>
+                        <button onClick={()=>{setCurrentPaginPage(0);setNextPaginPage(12);}} className="page">4</button>
+                        <button onClick={()=>{setCurrentPaginPage(12);setNextPaginPage(24);}} className="page">5</button>
+                        {/* <button onClick={} className="page">3</button>
+                        <button onClick={} className="page">4</button>
+                        <button onClick={} className="page">5</button>  */}
                     </div>
                     <a className="more_btn">Показать еще</a>
                 </div>
